@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Cleaner Planner</string>
+
+    <!-- Login Main Activity Strings -->
+    <string name="loginMainActivityStringLoginText">Continue with login:</string>
+    <string name="loginMainActivityStringLoginGmail">Continue with Gmail login</string>
+    <string name="loginMainActivityStringCreted">Created by Dante</string>
+
+    <!-- Menu Top Navigation Strings -->
+    <string name="searchStringTextTopMenuIcon">Search</string>
+    <string name="calendarStringTextTopMenuIcon">Calendar</string>
+    <string name="deleteStringTextTopMenuIcon">Delete</string>
+
+    <!-- Menu Bottom Navigation Strings -->
+    <string name="worksheetsStringTextBottomMenuIcon">Worksheets</string>
+    <string name="historyStringTextBottomMenuIcon">History</string>
+    <string name="paymentsStringTextBottomMenuIcon">Payments</string>
+    <string name="clientsStringTextBottomMenuIcon">Clients</string>
+    <string name="settingsStringTextBottomMenuIcon">Settings</string>
+
+    <!-- Login Gmail Activity Strings -->
+    <string name="loginGmailActivityStringWaitOnConnection">Wait please on Connection …</string>
+
+    <!-- Worksheets Done Activity Strings -->
+    <string name="worksheetsDoneActivityStringJobDoneTextView">Job Done</string>
+    <string name="worksheetsDoneActivityStringBalanceTextView">Balance</string>
+    <string name="worksheetsDoneActivityStringChargedTextView">Charged</string>
+    <string name="worksheetsDoneActivityStringPaidTextView">Paid</string>
+    <string name="worksheetsDoneActivityStringMethodTextView">Method</string>
+    <string name="worksheetsDoneActivityStringCancelButton">Cancel</string>
+    <string name="worksheetsDoneActivityStringSubmitButton">Submit</string>
+
+    <string-array name="worksheetsDoneActivityStringMethodSpinner">
+
+        <item>Cash</item>
+        <item>Checque</item>
+        <item>Envelope</item>
+
+    </string-array>
+
+    <!-- Worksheets Missed Activity Strings -->
+    <string name="worksheetsDoneActivityStringJobMissedTextView">Job Missed</string>
+    <string name="worksheetsMissedActivityStringReasonTextView">Reason: </string>
+    <string name="worksheetsMissedActivityStringReasonAutoCompleteTextView">Reason</string>
+
+
+    <!-- History Fragment Strings -->
+    <string name="historyFragmentStringAllTabItem">All</string>
+    <string name="historyFragmentStringDoneTabItem">DONE</string>
+    <string name="historyFragmentStringMissedTabItem">MISSED</string>
+
+    <!-- Clients Activity Add Strings -->
+    <string name="clientsActivityAddStringNameHintEditText">Client Name</string>
+    <string name="clientsActivityAddStringAddressHintEditText">Client Address</string>
+    <string name="clientsActivityAddStringPhoneHintEditText">Client Phone Number</string>
+    <string name="clientsActivityAddStringEmailHintEditText">Client Email Address</string>
+    <string name="clientsActivityAddStringPaymentHintEditText">Client Payment</string>
+    <string name="clientsActivityAddStringRepeatHintEditText">Repeat Client Weeks</string>
+    <string name="clientsActivityAddStringWorkHintEditText">Start Work Client Date</string>
+    <string name="clientsActivityAddStringDescriptionTextView">Description: </string>
+    <string name="clientsActivityAddStringDescriptionHintCompleteTextView">Client description</string>
+
+    <string name="clientsActivityAddStringCancelButton">Cancel</string>
+    <string name="clientsActivityAddStringDeleteButton">Delete</string>
+    <string name="clientsActivityAddStringSubmitButton">Submit</string>
+
+    <!-- Payments Activity List Item Strings -->
+    <string name="paymentsActivityListItemStringNameHintEditText">Name</string>
+    <string name="paymentsActivityListItemStringAddressHintEditText">Address</string>
+    <string name="paymentsActivityListItemStringChargedHintEditText">Charged</string>
+    <string name="paymentsActivityListItemStringBalanceHintEditText">Balance</string>
+    <string name="paymentsActivityListItemStringTotalHintEditText">Total</string>
+
+    <string name="historyActivityListItemStringCancelButton">Cancel</string>
+    <string name="historyActivityListItemDeleteButton">Delete</string>
+    <string name="historyActivityListItemDoneButton">Done</string>
+    <string name="historyActivityListItemSubmitButton">Submit</string>
+
+
+    <!-- Settings Fragment Strings -->
+    <string name="settingsFragmentStringUserNameTextView">Name:</string>
+    <string name="settingsFragmentStringUserEmailTextView">Email:</string>
+    <string name="settingsFragmentStringSignOutButton">Sign Out</string>
+
+    <!-- Clients Adapter Strings -->
+    <string name="clientsAdapterStringNameTextView">Name:</string>
+    <string name="clientsAdapterStringAddressTextView">Address:</string>
+    <string name="clientsAdapterStringPhoneTextView">Phone:</string>
+    <string name="clientsAdapterStringEmailTextView">Email:</string>
+    <string name="clientsAdapterStringDateTextView">Date:</string>
+    <string name="clientsAdapterStringChargedTextView">Charged:</string>
+    <string name="clientsAdapterStringRepeatTextView">Repeat:</string>
+    <string name="clientsAdapterStringDescriptionTextView">Description:</string>
+
+    <!-- History Adapter Strings -->
+    <string name="historyAdapterStringNameTextView">Name:</string>
+    <string name="historyAdapterStringChargedTextView">Charged:</string>
+    <string name="historyAdapterStringPaidTextView">Paid:</string>
+    <string name="historyAdapterStringMethodTextView">Method:</string>
+    <string name="historyAdapterStringReasonTextView">Reason:</string>
+    <string name="historyAdapterStringDateTextView">Date:</string>
+
+    <!-- Payments Adapter Strings -->
+    <string name="paymentsAdapterStringNameTextView">Name:</string>
+    <string name="paymentsAdapterStringAddressTextView">Address:</string>
+    <string name="paymentsAdapterStringChargedTextView">Charged:</string>
+    <string name="paymentsAdapterStringBalanceTextView">Balance:</string>
+    <string name="paymentsAdapterStringTotalTextView">Total:</string>
+
+</resources>

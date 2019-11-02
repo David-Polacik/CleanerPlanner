@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20sp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_client_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/paymentsAdapterStringNameTextView"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/adapter_payments_name_client_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Name Client"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_address_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/paymentsAdapterStringAddressTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_payments_address_client_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Address Client" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_charged_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/paymentsAdapterStringChargedTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_payments_charged_client_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Charged Client" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_balance_icon" />
+
+            <TextView
+                android:id="@+id/balance_client_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/paymentsAdapterStringBalanceTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_payments_balance_client_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Balance Client" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_total_payments_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/paymentsAdapterStringTotalTextView"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/adapter_payments_total_payments_client_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Total Payments"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

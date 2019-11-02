@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#3F5169</color>
+    <color name="colorPrimaryDark">#25354E</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!-- Application shape background. -->
+    <color name="appShapeBackgroundStartColor">#3F5169</color>
+    <color name="appShapeBackgroundEndColor">#25354E</color>
+
+    <!-- Application buttons background. -->
+    <color name="buttonShapeBackgroundStartColor">#3FBDAF</color>
+    <color name="buttonShapeBackgroundEndColor">#03B5D1</color>
+
+    <!-- Application text color. -->
+    <color name="appTextColor">#EDF9F7</color>
+
+    <!-- Application text color. -->
+    <color name="logoTextColor">#8490A4</color>
+
+</resources>
+

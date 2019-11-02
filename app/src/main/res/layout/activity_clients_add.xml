@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ClientsActivityAdd">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/activity_clients_add_info_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_client_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/clientsActivityAddStringNameHintEditText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_address_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_address_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringAddressHintEditText"
+                    android:inputType="textPostalAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_phone_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_phone_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringPhoneHintEditText"
+                    android:inputType="phone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_email_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringEmailHintEditText"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_payment_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_payment_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringPaymentHintEditText"
+                    android:inputType="numberSigned|numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_repeat_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_add_repeat_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringRepeatHintEditText"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_work_icon" />
+
+                <EditText
+                    android:id="@+id/activity_clients_start_work_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/clientsActivityAddStringWorkHintEditText"
+                    android:inputType="date" />
+
+
+                <ImageButton
+                    android:id="@+id/activity_clients_add_calendar_icon"
+                    android:background="@null"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_calendar_icon" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/clients_add_activity_description_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/clientsActivityAddStringDescriptionTextView"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/activity_clients_add_description_auto_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="@string/clientsActivityAddStringDescriptionHintCompleteTextView" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_clients_add_cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:layout_weight="1"
+                    android:text="@string/clientsActivityAddStringCancelButton" />
+
+                <Button
+                    android:id="@+id/activity_clients_add_delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_weight="1"
+                    android:text="@string/clientsActivityAddStringDeleteButton"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/activity_clients_add_submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_weight="1"
+                    android:text="@string/clientsActivityAddStringSubmitButton" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_activity"
+    tools:context=".activities.WorksheetsDoneActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/worksheetsDoneActivityStringJobMissedTextView"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/worksheetsMissedActivityStringReasonTextView" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/activity_worksheets_missed_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/worksheetsMissedActivityStringReasonAutoCompleteTextView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_worksheets_missed_cancel_button"
+                style="@style/shapeButtonBackground"
+                android:layout_width="0dp"
+                android:layout_height="30sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringCancelButton" />
+
+            <Button
+                android:id="@+id/activity_worksheets_missed_submit_button"
+                style="@style/shapeButtonBackground"
+                android:layout_width="0dp"
+                android:layout_height="30sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringSubmitButton" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

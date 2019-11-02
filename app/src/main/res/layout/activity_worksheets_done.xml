@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_activity"
+    tools:context=".activities.WorksheetsDoneActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/worksheetsDoneActivityStringJobDoneTextView"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringBalanceTextView"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_worksheets_done_balance_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringChargedTextView"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_worksheets_done_charged_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringPaidTextView"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/activity_worksheets_done_paid_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringMethodTextView"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/activity_worksheets_done_method_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_worksheets_done_cancel_button"
+                style="@style/shapeButtonBackground"
+                android:layout_width="0dp"
+                android:layout_height="30sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringCancelButton" />
+
+            <Button
+                android:id="@+id/activity_worksheets_done_submit_button"
+                style="@style/shapeButtonBackground"
+                android:layout_width="0dp"
+                android:layout_height="30sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                android:text="@string/worksheetsDoneActivityStringSubmitButton" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:gravity="center_horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_client_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_address_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_address_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="adresa" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_phone_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_phone_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_email_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_email_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_payment_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_payment_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="payment" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_calendar_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_due_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due " />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/adapter_worksheets_done_button"
+                android:background="#439C45"
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Done" />
+
+            <Button
+                android:id="@+id/adapter_worksheets_missed_button"
+                android:background="#9B2E45"
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Missed" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5sp">
+
+            <ImageButton
+                android:id="@+id/adapter_worksheets_call_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/worksheets_adapter_call_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="CALL " />
+
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5sp">
+
+                <ImageButton
+                    android:id="@+id/adapter_worksheets_sms_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/worksheets_adapter_sms_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="SMS " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5sp">
+
+                <ImageButton
+                    android:id="@+id/adapter_worksheets_email_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/worksheets_adapter_email_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="MAIL " />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5sp">
+
+                <ImageButton
+                    android:id="@+id/adapter_worksheets_gps_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/worksheets_adapter_gps_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="GPS " />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5sp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                app:srcCompat="@drawable/clients_add_activity_description_icon" />
+
+            <TextView
+                android:id="@+id/adapter_worksheets_description_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="description " />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

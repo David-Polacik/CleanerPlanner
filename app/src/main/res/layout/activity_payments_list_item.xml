@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ClientsActivityAdd">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_client_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/activity_payments_list_item_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:hint="@string/paymentsActivityListItemStringNameHintEditText"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_address_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/activity_payments_list_item_address_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:hint="@string/paymentsActivityListItemStringAddressHintEditText"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_charged_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charged:"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/activity_payments_list_item_charged_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:hint="@string/worksheetsDoneActivityStringChargedTextView"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_balance_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance:"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/activity_payments_list_item_balance_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="5sp"
+                    android:hint="@string/paymentsActivityListItemStringBalanceHintEditText"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/clients_add_activity_total_payments_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/activity_payments_list_item_total_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:layout_marginStart="5sp"
+                    android:hint="@string/paymentsActivityListItemStringTotalHintEditText"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_payments_list_item_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+                android:text="@string/historyActivityListItemStringCancelButton" />
+
+            <Button
+                android:id="@+id/activity_payments_list_item_submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:text="@string/historyActivityListItemSubmitButton" />
+
+        </LinearLayout>
+
+</RelativeLayout>

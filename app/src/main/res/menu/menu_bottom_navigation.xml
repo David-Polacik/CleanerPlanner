@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_bottom_navigation_worksheets"
+        android:icon="@drawable/menu_bottom_navigation_worksheets_icon"
+        android:title="@string/worksheetsStringTextBottomMenuIcon" />
+    <item
+        android:id="@+id/menu_bottom_navigation_history"
+        android:icon="@drawable/menu_bottom_navigation_history_icon"
+        android:title="@string/historyStringTextBottomMenuIcon" />
+    <item
+        android:id="@+id/menu_bottom_navigation_payments"
+        android:icon="@drawable/menu_bottom_navigation_payments_icon"
+        android:title="@string/paymentsStringTextBottomMenuIcon" />
+    <item
+        android:id="@+id/menu_bottom_navigation_clients"
+        android:icon="@drawable/menu_bottom_navigation_clients_icon"
+        android:title="@string/clientsStringTextBottomMenuIcon" />
+    <item
+        android:id="@+id/menu_bottom_navigation_settings"
+        android:icon="@drawable/menu_bottom_navigation_settings_icon"
+        android:title="@string/settingsStringTextBottomMenuIcon" />
+
+
+</menu>

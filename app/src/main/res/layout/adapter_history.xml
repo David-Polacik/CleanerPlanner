@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20sp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/adapter_history_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+               <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_client_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringNameTextView"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_name_client_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Name Client"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/history_adapter_charged_paid_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_charged_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringChargedTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_charged_client_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Charged Client" />
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_payment_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringPaidTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_paid_client_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Paid Client" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/history_adapter_method_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_work_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringMethodTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_method_client_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Method Client" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/history_adapter_reason_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_description_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringReasonTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_reason_client_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Reason Client" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                app:srcCompat="@drawable/clients_add_activity_calendar_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/historyAdapterStringDateTextView"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/adapter_history_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="Date Client"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

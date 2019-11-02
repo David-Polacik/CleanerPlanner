@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_client_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/clientsAdapterStringNameTextView"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/adapter_clients_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Name Client"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_address_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/clientsAdapterStringAddressTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_clients_address_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Address Client" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_phone_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/clientsAdapterStringPhoneTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_clients_phone_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Phone Client" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_email_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/clientsAdapterStringEmailTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_clients_email_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Email Client"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_calendar_icon" />
+
+            <TextView
+                android:id="@+id/adapter_clients_date_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:text="Date"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_charged_icon" />
+
+
+            <TextView
+                android:id="@+id/adapter_clients_charged_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:text="Charged"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_repeat_icon" />
+
+            <TextView
+                android:id="@+id/adapter_clients_repeat_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:text="Repeat"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/clients_add_activity_description_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:text="@string/clientsAdapterStringDescriptionTextView"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/adapter_clients_description_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:text="Description"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

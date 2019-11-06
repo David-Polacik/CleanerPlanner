@@ -36,11 +36,16 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u00A3"
+                android:textSize="18sp" />
+
+            <TextView
                 android:id="@+id/activity_worksheets_done_balance_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0.00"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -60,11 +65,16 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u00A3"
+                android:textSize="18sp" />
+
+            <TextView
                 android:id="@+id/activity_worksheets_done_charged_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0.00"
                 android:textSize="16sp" />
 
 
@@ -84,6 +94,50 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <RadioGroup
+                android:id="@+id/activity_worksheets_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checkedButton="@id/activity_worksheets_no_radio_button"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/activity_worksheets_yes_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/activity_worksheets_no_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_worksheets_done_paid_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u00A3"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/activity_worksheets_done_paid_edit_text"
@@ -91,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal" />
 
 
         </LinearLayout>

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,6 +43,8 @@ public class WorksheetsFragment extends Fragment {
     private WorksheetsAdapter worksheetsAdapter;
     private List<ClientsBean> dateClientsBean;
     private ProgressBar worksheetsFragmentProgressBar;
+    private TextView worksheetsFragmentTodoTextView;
+    private TextView worksheetsFragmentTotalPriceTextView;
 
     private int dateWeekInt;
     private int dateYearInt;
@@ -70,6 +73,9 @@ public class WorksheetsFragment extends Fragment {
         worksheetsFragmentListView = worksheetsFragmentView.findViewById(R.id.worksheets_fragment_list_view);
 
         worksheetsFragmentProgressBar = worksheetsFragmentView.findViewById(R.id.fragment_worksheets_progress_bar);
+
+        worksheetsFragmentTodoTextView = worksheetsFragmentView.findViewById(R.id.worksheets_fragment_todo_text_view);
+        worksheetsFragmentTotalPriceTextView = worksheetsFragmentView.findViewById(R.id.worksheets_fragment_total_price_text_view);
 
         clientsBeanList = new ArrayList<>();
         dateClientsBean = new ArrayList<>();
@@ -184,10 +190,13 @@ public class WorksheetsFragment extends Fragment {
         dateClientsBean = new ArrayList<>();
 
         int reatDate = (dateYearInt * 100) + dateWeekInt;
+        double totalPrice = 0;
+
         for (ClientsBean clientsBean : clientsBeanList) {
 
             int clientData = (clientsBean.getClientYearWork() * 100) + clientsBean.getClientWeekWork();
             if (reatDate >= clientData) {
+                totalPrice = totalPrice + clientsBean.getClientPayment();
                 dateClientsBean.add(clientsBean);
             }
         }
@@ -195,6 +204,8 @@ public class WorksheetsFragment extends Fragment {
         if (getActivity() != null) {
             worksheetsAdapter = new WorksheetsAdapter(getActivity(), R.layout.adapter_worksheets, dateClientsBean);
             worksheetsFragmentListView.setAdapter(worksheetsAdapter);
+            worksheetsFragmentTodoTextView.setText(String.valueOf(worksheetsAdapter.getCount()));
+            worksheetsFragmentTotalPriceTextView.setText(("\u00A3" + totalPrice));
         }
 
 

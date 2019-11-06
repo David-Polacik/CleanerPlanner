@@ -88,7 +88,7 @@ public class ClientsActivityAdd extends AppCompatActivity {
         updateClients = getIntent();
 
         clientsFragmentListViewPosition = updateClients.getIntExtra(IntentConstant.KEY_CLIENTLISTVIEWPOSITION, -1);
-
+        clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEASTARTWORK));
         if (clientsFragmentListViewPosition != -1) {
             clientsActivityAddDeleteButton.setVisibility(View.VISIBLE);
         }
@@ -102,11 +102,11 @@ public class ClientsActivityAdd extends AppCompatActivity {
         clientsActivityAddPhoneEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANPHONE));
         clientsActivityAddEmailEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANEMAIL));
         clientsActivityAddPaymentEditText.setText(String.valueOf(updateClients.getDoubleExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, 0)));
-        clientsActivityAddRepeatEditText.setText(String.valueOf(updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANEMREPEAT, 0)));
+        clientsActivityAddRepeatEditText.setText(String.valueOf(updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANREPEAT, 0)));
         clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEASTARTWORK));
         weekWork = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, 0);
         yearWork = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, 0);
-        clientsActivityAddDescriptionEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANEDESCRIPTION));
+        clientsActivityAddDescriptionEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANDESCRIPTION));
 
         clickOnCancelButton();
         clickOnDeleteButton();
@@ -131,28 +131,35 @@ public class ClientsActivityAdd extends AppCompatActivity {
                 String description = clientsActivityAddDescriptionEditText.getText().toString();
 
                 if (name.trim().isEmpty() || name.length() > 30 || !name.matches("[a-zA-Z ]+")) {
-                    if (name.trim().isEmpty())clientsActivityAddNameEditText.setError("Null");
-                    else if (name.length() > 30) clientsActivityAddNameEditText.setError("Name is long. Max size is 30 char.");
-                    else if (!name.matches("[a-zA-Z ]+")) clientsActivityAddNameEditText.setError("Wrong char.");
+                    if (name.trim().isEmpty()) clientsActivityAddNameEditText.setError("Null");
+                    else if (name.length() > 30)
+                        clientsActivityAddNameEditText.setError("Name is long. Max size is 30 char.");
+                    else if (!name.matches("[a-zA-Z ]+"))
+                        clientsActivityAddNameEditText.setError("Wrong char.");
                 } else if (address.trim().isEmpty() || address.length() > 30 || !address.matches("[a-zA-Z0-9 -/]+")) {
-                    if (address.trim().isEmpty())clientsActivityAddAddressEditText.setError("Null");
-                    else if (address.length() > 30) clientsActivityAddAddressEditText.setError("Address is long. Max size is 30 char.");
-                    else if (!address.matches("[a-zA-Z0-9 -/]+")) clientsActivityAddAddressEditText.setError("Wrong char.");
-                } else if (phone.trim().isEmpty()) {
-                    clientsActivityAddPhoneEditText.setError("Null");
-                } else if (email.trim().isEmpty() || !email.matches("[\\w+[\\.]]+@\\w+\\.[a-z]{2,3}")) {
-                    if (email.trim().isEmpty()) clientsActivityAddEmailEditText.setError("Null");
-                    else if (!email.matches("[\\w+[\\.]]+@\\w+\\.[a-z]{2,3}"))
+                    if (address.trim().isEmpty())
+                        clientsActivityAddAddressEditText.setError("Null");
+                    else if (address.length() > 30)
+                        clientsActivityAddAddressEditText.setError("Address is long. Max size is 30 char.");
+                    else if (!address.matches("[a-zA-Z0-9 -/]+"))
+                        clientsActivityAddAddressEditText.setError("Wrong char.");
+                } else if (!email.isEmpty() && !email.matches("[\\w+[\\.]]+@\\w+\\.[a-z]{2,3}")) {
+                    if (!email.matches("[\\w+[\\.]]+@\\w+\\.[a-z]{2,3}")) {
                         clientsActivityAddEmailEditText.setError("Wrong email");
+                    }
                 } else if (payment == 0 || !payment.toString().matches("\\d{1,4}\\.\\d{1,2}")) {
                     if (payment == 0) clientsActivityAddPaymentEditText.setError("Null");
-                    else if (!payment.toString().matches("\\d{1,4}\\.\\d{1,2}")) clientsActivityAddPaymentEditText.setError("Wrong payment format. Format must be 0000.00");
+                    else if (!payment.toString().matches("\\d{1,4}\\.\\d{1,2}"))
+                        clientsActivityAddPaymentEditText.setError("Wrong payment format. Format must be 0000.00");
                 } else if (repeatWork == 0 || repeatWork > 30) {
                     if (repeatWork == 0) clientsActivityAddRepeatEditText.setError("Null");
-                    else if (repeatWork > 30) clientsActivityAddRepeatEditText.setError("Repeat work is long. Max size is 30.");
+                    else if (repeatWork > 30)
+                        clientsActivityAddRepeatEditText.setError("Repeat work is long. Max size is 30.");
                 } else if (workStart.trim().isEmpty() || !workStart.matches("\\d{1,2}\\.\\d{1,2}\\.\\d{4}")) {
-                    if (workStart.trim().isEmpty()) clientsActivityStartWorkEditText.setError("Null");
-                    else if (!workStart.matches("\\d{1,2}\\.\\d{1,2}\\.\\d{4}")) clientsActivityStartWorkEditText.setError("Wrong date format. Format must be DD.MM.YYYY");
+                    if (workStart.trim().isEmpty())
+                        clientsActivityStartWorkEditText.setError("Null");
+                    else if (!workStart.matches("\\d{1,2}\\.\\d{1,2}\\.\\d{4}"))
+                        clientsActivityStartWorkEditText.setError("Wrong date format. Format must be DD.MM.YYYY");
                 } else {
 
                     if (dateWeekInt != 0 && dateYearInt != 0) {

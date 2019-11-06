@@ -19,7 +19,7 @@
     <string name="settingsStringTextBottomMenuIcon">Settings</string>
 
     <!-- Login Gmail Activity Strings -->
-    <string name="loginGmailActivityStringWaitOnConnection">Wait please on Connection …</string>
+    <string name="loginGmailActivityStringWaitOnConnection">Connecting…</string>
 
     <!-- Worksheets Done Activity Strings -->
     <string name="worksheetsDoneActivityStringJobDoneTextView">Job Done</string>
@@ -50,32 +50,42 @@
     <string name="historyFragmentStringMissedTabItem">MISSED</string>
 
     <!-- Clients Activity Add Strings -->
-    <string name="clientsActivityAddStringNameHintEditText">Client Name</string>
-    <string name="clientsActivityAddStringAddressHintEditText">Client Address</string>
-    <string name="clientsActivityAddStringPhoneHintEditText">Client Phone Number</string>
-    <string name="clientsActivityAddStringEmailHintEditText">Client Email Address</string>
-    <string name="clientsActivityAddStringPaymentHintEditText">Client Payment</string>
-    <string name="clientsActivityAddStringRepeatHintEditText">Repeat Client Weeks</string>
-    <string name="clientsActivityAddStringWorkHintEditText">Start Work Client Date</string>
-    <string name="clientsActivityAddStringDescriptionTextView">Description: </string>
-    <string name="clientsActivityAddStringDescriptionHintCompleteTextView">Client description</string>
+    <string name="clientsActivityAddStringNameHintEditText">Name</string>
+    <string name="clientsActivityAddStringAddressHintEditText">Address, Town, PostCode</string>
+    <string name="clientsActivityAddStringPhoneHintEditText">Phone Number</string>
+    <string name="clientsActivityAddStringEmailHintEditText">Email Address</string>
+    <string name="clientsActivityAddStringPaymentHintEditText">Price</string>
+    <string name="clientsActivityAddStringRepeatHintEditText">Weekly</string>
+    <string name="clientsActivityAddStringWorkHintEditText">First clean date</string>
+    <string name="clientsActivityAddStringDescriptionTextView">Note: </string>
+    <string name="clientsActivityAddStringDescriptionHintCompleteTextView">Note</string>
 
     <string name="clientsActivityAddStringCancelButton">Cancel</string>
     <string name="clientsActivityAddStringDeleteButton">Delete</string>
     <string name="clientsActivityAddStringSubmitButton">Submit</string>
 
     <!-- Payments Activity List Item Strings -->
-    <string name="paymentsActivityListItemStringNameHintEditText">Name</string>
-    <string name="paymentsActivityListItemStringAddressHintEditText">Address</string>
-    <string name="paymentsActivityListItemStringChargedHintEditText">Charged</string>
-    <string name="paymentsActivityListItemStringBalanceHintEditText">Balance</string>
-    <string name="paymentsActivityListItemStringTotalHintEditText">Total</string>
+    <string name="paymentsActivityListItemStringNameTextView">Name: </string>
+    <string name="paymentsActivityListItemStringAddressTextView">Address: </string>
+    <string name="paymentsActivityListItemStringChargedTextView">Charged: </string>
+    <string name="paymentsActivityListItemStringBalanceTextView">Balance: </string>
+    <string name="paymentsActivityListItemStringTotalTextView">Total: </string>
 
-    <string name="historyActivityListItemStringCancelButton">Cancel</string>
-    <string name="historyActivityListItemDeleteButton">Delete</string>
-    <string name="historyActivityListItemDoneButton">Done</string>
-    <string name="historyActivityListItemSubmitButton">Submit</string>
+    <string name="paymentsActivityListItemStringNameHintTextView">Name</string>
+    <string name="paymentsActivityListItemStringAddressHintTextView">Address</string>
+    <string name="paymentsActivityListItemStringChargedHintTextView">Charged</string>
+    <string name="paymentsActivityListItemStringBalanceHintTextView">Balance</string>
+    <string name="paymentsActivityListItemStringTotalHintTextView">Total</string>
 
+    <string name="paymentsActivityListItemStringCancelButton">Cancel</string>
+    <string name="paymentsActivityListItemAddButton">Add Payment</string>
+    <string name="paymentsActivityListItemSubmitButton">Submit</string>
+
+    <!-- Payment Activity Add Strings -->
+    <string name="paymentActivityAddStringPaymentTextView">Add Payment</string>
+    <string name="paymentActivityAddStringPaidTextView">Paid: </string>
+    <string name="paymentActivityAddStringCancelButton">Cancel</string>
+    <string name="paymentActivityAddStringSubmitButton">Submit</string>
 
     <!-- Settings Fragment Strings -->
     <string name="settingsFragmentStringUserNameTextView">Name:</string>

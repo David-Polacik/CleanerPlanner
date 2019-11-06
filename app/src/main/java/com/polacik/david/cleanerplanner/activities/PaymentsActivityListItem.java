@@ -1,7 +1,9 @@
 package com.polacik.david.cleanerplanner.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,16 +26,19 @@ public class PaymentsActivityListItem extends AppCompatActivity {
     private TextView paymentsActivityListItemNameEditText;
     private TextView paymentsActivityListItemAddressEditText;
     private TextView paymentsActivityListItemChargedEditText;
-    private EditText paymentsActivityListItemBalanceEditText;
-    private EditText paymentsActivityListItemTotalEditText;
+    private TextView paymentsActivityListItemBalanceEditText;
+    private TextView paymentsActivityListItemTotalEditText;
 
     private Button historyActivityListItemCancelButton;
     private Button historyActivityListItemSubmitButton;
+    private Button historyActivityListItemAddPaymentButton;
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReferenceClients;
 
     private String clientId;
+    private Double clientBalance;
+    private Double clientTotal;
 
 
     @Override
@@ -52,19 +57,24 @@ public class PaymentsActivityListItem extends AppCompatActivity {
 
         historyActivityListItemCancelButton = findViewById(R.id.activity_payments_list_item_cancel_button);
         historyActivityListItemSubmitButton = findViewById(R.id.activity_payments_list_item_submit_button);
+        historyActivityListItemAddPaymentButton = findViewById(R.id.activity_payments_list_item_add_payment_button);
 
         Intent updateData = getIntent();
 
-        clientId = updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANID);
-        paymentsActivityListItemNameEditText.setText(updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANNAME));
-        paymentsActivityListItemAddressEditText.setText(updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANADDRESS));
-        paymentsActivityListItemChargedEditText.setText(String.valueOf(updateData.getDoubleExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, 0)));
-        paymentsActivityListItemBalanceEditText.setText(String.valueOf(updateData.getDoubleExtra(IntentConstant.KEY_PAYMENTSBALANCE, 0)));
-        paymentsActivityListItemTotalEditText.setText(String.valueOf(updateData.getDoubleExtra(IntentConstant.KEY_PAYMENTSTOTAL, 0)));
-
+        if (updateData != null) {
+            clientId = updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANID);
+            clientTotal = updateData.getDoubleExtra(IntentConstant.KEY_PAYMENTSTOTAL, 0);
+            clientBalance = updateData.getDoubleExtra(IntentConstant.KEY_PAYMENTSBALANCE, 0);
+            paymentsActivityListItemNameEditText.setText(updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANNAME));
+            paymentsActivityListItemAddressEditText.setText(updateData.getStringExtra(IntentConstant.KEY_CLIENTBEANADDRESS));
+            paymentsActivityListItemChargedEditText.setText(String.valueOf(updateData.getDoubleExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, 0)));
+            paymentsActivityListItemBalanceEditText.setText(String.valueOf(clientBalance));
+            paymentsActivityListItemTotalEditText.setText(String.valueOf(clientTotal));
+        }
 
         clickOnCancelButton();
         clickOnSubmitButton();
+        clickOnAddPaymentButton();
 
     }
 
@@ -104,6 +114,31 @@ public class PaymentsActivityListItem extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void clickOnAddPaymentButton() {
+
+        historyActivityListItemAddPaymentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent showWorksheetsPaymentActivity = new Intent(PaymentsActivityListItem.this, PaymentActivityAdd.class);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANID, clientId);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANBALANCE, clientBalance);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANTOTAL, clientTotal);
+                startActivityForResult(showWorksheetsPaymentActivity, 0);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                finish();
+            }
+        }
     }
 
 }

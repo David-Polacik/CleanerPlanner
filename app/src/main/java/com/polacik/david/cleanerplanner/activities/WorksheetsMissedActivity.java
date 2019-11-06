@@ -14,6 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.polacik.david.cleanerplanner.R;
 import com.polacik.david.cleanerplanner.bean.PaymentBean;
+import com.polacik.david.cleanerplanner.constant.IntentConstant;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -46,7 +47,7 @@ public class WorksheetsMissedActivity extends Activity {
         getWindow().setAttributes(layoutParams);
 
         Intent getClientId = getIntent();
-        clientId = getClientId.getStringExtra("SENDCLIENTID");
+        clientId = getClientId.getStringExtra(IntentConstant.KEY_CLIENTBEANID);
 
 
         clickOnCancelButton();

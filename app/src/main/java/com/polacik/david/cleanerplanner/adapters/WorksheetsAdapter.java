@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import com.polacik.david.cleanerplanner.activities.WorksheetsDoneActivity;
 import com.polacik.david.cleanerplanner.activities.WorksheetsMissedActivity;
 import com.polacik.david.cleanerplanner.bean.ClientsBean;
 import com.polacik.david.cleanerplanner.bean.SettingsBean;
+import com.polacik.david.cleanerplanner.constant.IntentConstant;
 
 import java.util.List;
 import java.util.Objects;
@@ -36,6 +38,13 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
     private View worksheetsAdapterView;
     private ClientsBean clientsBean;
     private List<ClientsBean> worksheetsBeanList;
+
+    private LinearLayout worksheetsAdapterPhoneLinearLayout;
+    private LinearLayout worksheetsAdapterEmailLinearLayout;
+    private LinearLayout worksheetsAdapterDescriptionLinearLayout;
+    private LinearLayout worksheetsAdapterCallLinearLayout;
+    private LinearLayout worksheetsAdapterSmsLinearLayout;
+    private LinearLayout worksheetsAdapterSendEmailLinearLayout;
 
     private TextView worksheetsAdapterNameTextView;
     private TextView worksheetsAdapterAddressTextView;
@@ -78,6 +87,13 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
 
         if (clientsBean != null) {
 
+            worksheetsAdapterPhoneLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_phone_linear_layout);
+            worksheetsAdapterEmailLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_email_linear_layout);
+            worksheetsAdapterDescriptionLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_description_linear_layout);
+            worksheetsAdapterCallLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_call_linear_layout);
+            worksheetsAdapterSmsLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_sms_linear_layout);
+            worksheetsAdapterSendEmailLinearLayout = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_send_email_linear_layout);
+
             worksheetsAdapterNameTextView = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_name_text_view);
             worksheetsAdapterAddressTextView = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_address_text_view);
             worksheetsAdapterPhoneTextView = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_phone_text_view);
@@ -94,12 +110,24 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
             worksheetsAdapterEmailImageButton = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_email_image_button);
             worksheetsAdapterGpsImageButton = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_gps_image_button);
 
+            if (clientsBean.getClientPhone().isEmpty()) {
+                worksheetsAdapterPhoneLinearLayout.setVisibility(View.GONE);
+                worksheetsAdapterCallLinearLayout.setVisibility(View.GONE);
+                worksheetsAdapterSmsLinearLayout.setVisibility(View.GONE);
+            }
+            if (clientsBean.getClientEmail().isEmpty()) {
+                worksheetsAdapterEmailLinearLayout.setVisibility(View.GONE);
+                worksheetsAdapterSendEmailLinearLayout.setVisibility(View.GONE);
+            }
+            if (clientsBean.getClientDescription().isEmpty()) {
+                worksheetsAdapterDescriptionLinearLayout.setVisibility(View.GONE);
+            }
 
             worksheetsAdapterNameTextView.setText(clientsBean.getClientName());
             worksheetsAdapterAddressTextView.setText(clientsBean.getClientAddress());
             worksheetsAdapterPhoneTextView.setText(clientsBean.getClientPhone());
             worksheetsAdapterEmailTextView.setText(clientsBean.getClientEmail());
-            worksheetsAdapterPaymentTextView.setText((clientsBean.getClientPayment() + " \u00A3"));
+            worksheetsAdapterPaymentTextView.setText(("\u00A3" + clientsBean.getClientPayment()));
             worksheetsAdapterWorkTextView.setText(clientsBean.getClientWorkStart());
             worksheetsAdapterDescriptionTextView.setText(clientsBean.getClientDescription());
 
@@ -231,14 +259,14 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
                 Double clientTotal = worksheetsBeanList.get(positionId).getClientTotal();
 
                 Intent showWorksheetsPaymentActivity = new Intent(getContext(), WorksheetsDoneActivity.class);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTID", clientId);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTNAME", clientName);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTWEEKWORK", weekWork);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTYEARWORK", yearWork);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTREPEATWORK", repeatWork);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTPAYMENT", clientPayment);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTBALANCE", clientBalance);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTTOTAL", clientTotal);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANID, clientId);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANNAME, clientName);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, weekWork);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, yearWork);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANREPEAT, repeatWork);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, clientPayment);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANBALANCE, clientBalance);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANTOTAL, clientTotal);
                 getContext().startActivity(showWorksheetsPaymentActivity);
             }
         });
@@ -250,13 +278,9 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
             public void onClick(View view) {
                 int positionId = (int) view.getTag();
                 String clientsBeanId = worksheetsBeanList.get(positionId).getClientId();
-                String clientName = worksheetsBeanList.get(positionId).getClientName();
-                String clientDescription = worksheetsBeanList.get(positionId).getClientDescription();
 
                 Intent showWorksheetsPaymentActivity = new Intent(getContext(), WorksheetsMissedActivity.class);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTID", clientsBeanId);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTNAME", clientName);
-                showWorksheetsPaymentActivity.putExtra("SENDCLIENTDESCRIPTION", clientDescription);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANID, clientsBeanId);
                 getContext().startActivity(showWorksheetsPaymentActivity);
 
             }

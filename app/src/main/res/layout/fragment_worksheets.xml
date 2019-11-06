@@ -17,6 +17,44 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape_bottom_border_user_info_settings">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO DO: "
+                android:layout_margin="10sp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/worksheets_fragment_todo_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price: "
+                android:layout_marginStart="10sp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/worksheets_fragment_total_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
         <ListView
             android:id="@+id/worksheets_fragment_list_view"
             android:layout_width="match_parent"

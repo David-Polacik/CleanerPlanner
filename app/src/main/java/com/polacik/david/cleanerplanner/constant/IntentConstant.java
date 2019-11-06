@@ -2,6 +2,7 @@ package com.polacik.david.cleanerplanner.constant;
 
 public class IntentConstant {
 
+    // Client
     public static final String KEY_CLIENTLISTVIEWPOSITION = "KEY_CLIENTLISTVIEWPOSITION";
     public static final String KEY_CLIENTBEANID = "KEY_CLIENTBEANID";
     public static final String KEY_CLIENTBEANNAME = "KEY_CLIENTBEANNAME";
@@ -11,11 +12,11 @@ public class IntentConstant {
     public static final String KEY_CLIENTBEANPAYMENT = "KEY_CLIENTBEANPAYMENT";
     public static final String KEY_CLIENTBEANBALANCE = "KEY_CLIENTBEANBALANCE";
     public static final String KEY_CLIENTBEANTOTAL = "KEY_CLIENTBEANTOTAL";
-    public static final String KEY_CLIENTBEANEMREPEAT = "KEY_CLIENTBEANEMREPEAT";
+    public static final String KEY_CLIENTBEANREPEAT = "KEY_CLIENTBEANREPEAT";
     public static final String KEY_CLIENTBEASTARTWORK = "KEY_CLIENTBEASTARTWORK";
     public static final String KEY_CLIENTBEANWEEKWORK = "KEY_CLIENTBEANWEEKWORK";
     public static final String KEY_CLIENTBEANYEARWORK = "KEY_CLIENTBEANYEARWORK";
-    public static final String KEY_CLIENTBEANEDESCRIPTION = "KEY_CLIENTBEANEDESCRIPTION";
+    public static final String KEY_CLIENTBEANDESCRIPTION = "KEY_CLIENTBEANDESCRIPTION";
     public static final String KEY_CLIENTBEANEPAYMENTSTATUS = "KEY_CLIENTBEANEPAYMENTSTATUS";
 
     public static final String KEY_CLIENTADDCALENDARDATE = "KEY_CLIENTADDCALENDARDATE";

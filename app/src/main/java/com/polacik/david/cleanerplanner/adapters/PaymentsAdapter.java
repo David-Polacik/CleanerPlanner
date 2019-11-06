@@ -53,7 +53,7 @@ public class PaymentsAdapter extends ArrayAdapter<ClientsBean> {
             balanceTextView = historyDoneAdapterView.findViewById(R.id.balance_client_text_view);
             paymentsAdapterTotalTextView = historyDoneAdapterView.findViewById(R.id.adapter_payments_total_payments_client_text_view);
 
-            if (clientsBean.getClientBalance() == 0) {
+            if (clientsBean.getClientBalance() <= 0) {
                 balanceTextView.setTextColor(Color.parseColor("#439C45"));
                 paymentsAdapterBalanceTextView.setTextColor(Color.parseColor("#439C45"));
 
@@ -64,9 +64,9 @@ public class PaymentsAdapter extends ArrayAdapter<ClientsBean> {
 
             paymentsAdapterNameTextView.setText(clientsBean.getClientName());
             paymentsAdapterAddressTextView.setText(clientsBean.getClientAddress());
-            paymentsAdapterChargedTextView.setText((clientsBean.getClientPayment() + " \u00A3"));
-            paymentsAdapterBalanceTextView.setText((clientsBean.getClientBalance() + " \u00A3"));
-            paymentsAdapterTotalTextView.setText((clientsBean.getClientTotal() + " \u00A3"));
+            paymentsAdapterChargedTextView.setText(("\u00A3" + clientsBean.getClientPayment()));
+            paymentsAdapterBalanceTextView.setText(("\u00A3" + clientsBean.getClientBalance()));
+            paymentsAdapterTotalTextView.setText(("\u00A3" + clientsBean.getClientTotal()));
 
         }
 

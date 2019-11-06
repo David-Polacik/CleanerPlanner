@@ -116,6 +116,12 @@
                     android:layout_marginEnd="10sp"
                     android:src="@drawable/clients_add_activity_payment_icon" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u00A3"
+                    android:textSize="18sp" />
+
                 <EditText
                     android:id="@+id/activity_clients_add_payment_edit_text"
                     android:layout_width="match_parent"

@@ -105,8 +105,8 @@ public class HistoryAdapter extends ArrayAdapter<PaymentBean> {
             }
 
             historyPaymentAdapterNameTextView.setText(clientsBean.getClientName());
-            historyPaymentAdapterChargedTextView.setText((paymentBean.getPaymentCharged() + " \u00A3"));
-            historyPaymentAdapterPaidTextView.setText((paymentBean.getPaymentPaid() + " \u00A3"));
+            historyPaymentAdapterChargedTextView.setText(("\u00A3" + paymentBean.getPaymentCharged()));
+            historyPaymentAdapterPaidTextView.setText((" \u00A3" + paymentBean.getPaymentPaid()));
             historyPaymentAdapterMethodTextView.setText(paymentBean.getPaymentMethod());
             historyPaymentAdapterDateTextView.setText(paymentBean.getPaymentDate());
             historyPaymentAdapterReasonTextView.setText(paymentBean.getPaymentReason());

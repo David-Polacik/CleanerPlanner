@@ -33,7 +33,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name:"
+                    android:text="@string/paymentsAdapterStringNameTextView"
                     android:textSize="18sp"
                     android:textStyle="bold|italic" />
 
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5sp"
-                    android:hint="@string/paymentsActivityListItemStringNameHintEditText"
+                    android:hint="@string/paymentsActivityListItemStringNameHintTextView"
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -63,7 +63,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Address:"
+                    android:text="@string/paymentsAdapterStringAddressTextView"
                     android:textSize="18sp"
                     android:textStyle="bold|italic" />
 
@@ -72,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5sp"
-                    android:hint="@string/paymentsActivityListItemStringAddressHintEditText"
+                    android:hint="@string/paymentsActivityListItemStringAddressHintTextView"
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -93,16 +93,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Charged:"
+                    android:text="@string/paymentsAdapterStringChargedTextView"
                     android:textSize="18sp"
                     android:textStyle="bold|italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:text="\u00A3"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/activity_payments_list_item_charged_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5sp"
-                    android:hint="@string/worksheetsDoneActivityStringChargedTextView"
+                    android:hint="@string/paymentsActivityListItemStringChargedHintTextView"
                     android:textSize="18sp"/>
 
             </LinearLayout>
@@ -122,18 +128,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Balance:"
+                    android:text="@string/paymentsAdapterStringBalanceTextView"
                     android:textSize="18sp"
                     android:textStyle="bold|italic" />
 
-                <EditText
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:text="\u00A3"
+                    android:textSize="18sp" />
+
+                <TextView
                     android:id="@+id/activity_payments_list_item_balance_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:layout_marginStart="5sp"
-                    android:hint="@string/paymentsActivityListItemStringBalanceHintEditText"
-                    android:inputType="numberDecimal" />
+                    android:hint="@string/paymentsActivityListItemStringBalanceHintTextView"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -152,20 +163,32 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total:"
+                    android:text="@string/paymentsAdapterStringTotalTextView"
                     android:textSize="18sp"
                     android:textStyle="bold|italic" />
 
-                <EditText
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:text="\u00A3"
+                    android:textSize="18sp" />
+
+                <TextView
                     android:id="@+id/activity_payments_list_item_total_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="top"
-                    android:layout_marginStart="5sp"
-                    android:hint="@string/paymentsActivityListItemStringTotalHintEditText"
-                    android:inputType="numberDecimal" />
+                    android:hint="@string/paymentsActivityListItemStringTotalHintTextView"
+                    android:textSize="18sp"/>
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/activity_payments_list_item_add_payment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="@string/paymentsActivityListItemAddButton"/>
 
 
         </LinearLayout>
@@ -186,10 +209,10 @@
             <Button
                 android:id="@+id/activity_payments_list_item_cancel_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="10sp"
                 android:layout_weight="1"
-                android:text="@string/historyActivityListItemStringCancelButton" />
+                android:text="@string/paymentsActivityListItemStringCancelButton" />
 
             <Button
                 android:id="@+id/activity_payments_list_item_submit_button"
@@ -197,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5sp"
                 android:layout_weight="1"
-                android:text="@string/historyActivityListItemSubmitButton" />
+                android:text="@string/paymentsActivityListItemSubmitButton" />
 
         </LinearLayout>
 

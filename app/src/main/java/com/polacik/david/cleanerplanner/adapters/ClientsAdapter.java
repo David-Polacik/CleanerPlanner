@@ -67,7 +67,7 @@ public class ClientsAdapter extends ArrayAdapter<ClientsBean> implements Filtera
             clientsAdapterPhoneTextView.setText(clientsBean.getClientPhone());
             clientsAdapterEmailTextView.setText(clientsBean.getClientEmail());
             clientsAdapterDateTextView.setText(clientsBean.getClientWorkStart());
-            clientsAdapterChargedTextView.setText(String.valueOf(clientsBean.getClientPayment()));
+            clientsAdapterChargedTextView.setText(("\u00A3" + clientsBean.getClientPayment()));
             clientsAdapterRepeatTextView.setText(String.valueOf(clientsBean.getClientWorkRepeat()));
             clientsAdapterDescriptionTextView.setText(clientsBean.getClientDescription());
         }

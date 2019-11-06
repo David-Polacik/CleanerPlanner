@@ -26,11 +26,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.polacik.david.cleanerplanner.R;
 import com.polacik.david.cleanerplanner.activities.ClientsActivityAdd;
 import com.polacik.david.cleanerplanner.adapters.ClientsAdapter;
-import com.polacik.david.cleanerplanner.adapters.HistoryAdapter;
 import com.polacik.david.cleanerplanner.bean.ClientsBean;
 import com.polacik.david.cleanerplanner.constant.IntentConstant;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -112,11 +113,11 @@ public class ClientsFragment extends Fragment {
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, idListView.getClientPayment());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANBALANCE, idListView.getClientBalance());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANTOTAL, idListView.getClientTotal());
-                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANEMREPEAT, idListView.getClientWorkRepeat());
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANREPEAT, idListView.getClientWorkRepeat());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEASTARTWORK, idListView.getClientWorkStart());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, idListView.getClientWeekWork());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, idListView.getClientYearWork());
-                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANEDESCRIPTION, idListView.getClientDescription());
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANDESCRIPTION, idListView.getClientDescription());
 
                 startActivityForResult(showClientsActivityAdd, 0);
             }
@@ -169,7 +170,13 @@ public class ClientsFragment extends Fragment {
         clientsFragmentAddFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat formatDate = new SimpleDateFormat("d.M.yyyy");
+                String todaysDate = formatDate.format(calendar.getTime());
+
                 Intent showClientsActivityAdd = new Intent(getActivity(), ClientsActivityAdd.class);
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEASTARTWORK, todaysDate);
                 startActivity(showClientsActivityAdd);
             }
         });

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PaymentsActivityListItem"></activity>
+        <activity android:name=".activities.PaymentsActivityListItem"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.WorksheetsDoneActivity"
             android:screenOrientation="portrait" />
@@ -22,6 +24,8 @@
             android:name=".activities.ClientsActivityAdd"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activities.PaymentActivityAdd"
+            android:screenOrientation="portrait"/>
         <activity android:name=".fragments.SettingsFragment" />
         <activity android:name=".fragments.ClientsFragment" />
         <activity android:name=".fragments.HistoryFragment" />

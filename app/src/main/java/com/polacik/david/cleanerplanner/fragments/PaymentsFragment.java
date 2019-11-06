@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,6 +39,10 @@ public class PaymentsFragment extends Fragment {
     private ListView paymentsFragmentListView;
     private PaymentsAdapter paymentsAdapter;
 
+    private TextView paymentsFragmentWorkTotalTextView;
+    private TextView paymentsFragmentBalanceTextView;
+    private TextView paymentsFragmentPaidTotalTextView;
+
     private List<ClientsBean> clientsBeanList;
 
     private DatabaseReference databaseReferenceClients;
@@ -52,6 +57,10 @@ public class PaymentsFragment extends Fragment {
 
         paymentsFragmentView = inflater.inflate(R.layout.fragment_payments, container, false);
         paymentsFragmentListView = paymentsFragmentView.findViewById(R.id.payments_fragment_list_view);
+
+        paymentsFragmentWorkTotalTextView = paymentsFragmentView.findViewById(R.id.fragment_payments_work_total_text_view);
+        paymentsFragmentBalanceTextView = paymentsFragmentView.findViewById(R.id.fragment_payments_balance_text_view);
+        paymentsFragmentPaidTotalTextView = paymentsFragmentView.findViewById(R.id.fragment_payments_paid_total_text_view);
 
         clientsBeanList = new ArrayList<>();
 
@@ -68,13 +77,28 @@ public class PaymentsFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 clientsBeanList.clear();
 
+                double workTotal = 0;
+                double balance = 0;
+                double paidTotal = 0;
+
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    clientsBeanList.add(ds.getValue(ClientsBean.class));
+                    ClientsBean clientsBean = ds.getValue(ClientsBean.class);
+                    if (clientsBean != null) {
+                        clientsBeanList.add(clientsBean);
+                        workTotal = workTotal + clientsBean.getClientPayment();
+                        balance = balance + clientsBean.getClientBalance();
+                        paidTotal = paidTotal + clientsBean.getClientTotal();
+                    }
+
 
                 }
+
                 if (getActivity() != null) {
                     paymentsAdapter = new PaymentsAdapter(getActivity(), R.layout.adapter_payments, clientsBeanList);
                     paymentsFragmentListView.setAdapter(paymentsAdapter);
+                    paymentsFragmentWorkTotalTextView.setText(("\u00A3" + workTotal));
+                    paymentsFragmentBalanceTextView.setText(("\u00A3" + balance));
+                    paymentsFragmentPaidTotalTextView.setText(("\u00A3" + paidTotal));
                 }
 
             }

@@ -88,7 +88,7 @@ public class ClientsActivityAdd extends AppCompatActivity {
         updateClients = getIntent();
 
         clientsFragmentListViewPosition = updateClients.getIntExtra(IntentConstant.KEY_CLIENTLISTVIEWPOSITION, -1);
-        clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEASTARTWORK));
+        clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANSTARTWORK));
         if (clientsFragmentListViewPosition != -1) {
             clientsActivityAddDeleteButton.setVisibility(View.VISIBLE);
         }
@@ -103,10 +103,12 @@ public class ClientsActivityAdd extends AppCompatActivity {
         clientsActivityAddEmailEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANEMAIL));
         clientsActivityAddPaymentEditText.setText(String.valueOf(updateClients.getDoubleExtra(IntentConstant.KEY_CLIENTBEANPAYMENT, 0)));
         clientsActivityAddRepeatEditText.setText(String.valueOf(updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANREPEAT, 0)));
-        clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEASTARTWORK));
+        clientsActivityStartWorkEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANSTARTWORK));
         weekWork = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, 0);
         yearWork = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, 0);
         clientsActivityAddDescriptionEditText.setText(updateClients.getStringExtra(IntentConstant.KEY_CLIENTBEANDESCRIPTION));
+        dateWeekInt = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, 0);
+        dateYearInt = updateClients.getIntExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, 0);
 
         clickOnCancelButton();
         clickOnDeleteButton();

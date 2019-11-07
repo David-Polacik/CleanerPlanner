@@ -110,6 +110,13 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
             worksheetsAdapterEmailImageButton = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_email_image_button);
             worksheetsAdapterGpsImageButton = worksheetsAdapterView.findViewById(R.id.adapter_worksheets_gps_image_button);
 
+            worksheetsAdapterPhoneLinearLayout.setVisibility(View.VISIBLE);
+            worksheetsAdapterCallLinearLayout.setVisibility(View.VISIBLE);
+            worksheetsAdapterSmsLinearLayout.setVisibility(View.VISIBLE);
+            worksheetsAdapterEmailLinearLayout.setVisibility(View.VISIBLE);
+            worksheetsAdapterSendEmailLinearLayout.setVisibility(View.VISIBLE);
+            worksheetsAdapterDescriptionLinearLayout.setVisibility(View.VISIBLE);
+
             if (clientsBean.getClientPhone().isEmpty()) {
                 worksheetsAdapterPhoneLinearLayout.setVisibility(View.GONE);
                 worksheetsAdapterCallLinearLayout.setVisibility(View.GONE);
@@ -144,11 +151,15 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
 
 
         clickOnCallImageButton();
+
         clickOnSmsImageButton();
+
         clickOnEmailImageButton();
+
         clickOnGpsImageButton();
 
         clickOnDoneButton();
+
         clickOnMissedButton();
 
         return worksheetsAdapterView;
@@ -278,9 +289,15 @@ public class WorksheetsAdapter extends ArrayAdapter<ClientsBean> {
             public void onClick(View view) {
                 int positionId = (int) view.getTag();
                 String clientsBeanId = worksheetsBeanList.get(positionId).getClientId();
+                Integer weekWork = worksheetsBeanList.get(positionId).getClientWeekWork();
+                Integer yearWork = worksheetsBeanList.get(positionId).getClientYearWork();
+                Integer repeatWork = worksheetsBeanList.get(positionId).getClientWorkRepeat();
 
                 Intent showWorksheetsPaymentActivity = new Intent(getContext(), WorksheetsMissedActivity.class);
                 showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANID, clientsBeanId);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, weekWork);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, yearWork);
+                showWorksheetsPaymentActivity.putExtra(IntentConstant.KEY_CLIENTBEANREPEAT, repeatWork);
                 getContext().startActivity(showWorksheetsPaymentActivity);
 
             }

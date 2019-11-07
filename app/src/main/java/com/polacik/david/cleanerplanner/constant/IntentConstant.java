@@ -13,7 +13,7 @@ public class IntentConstant {
     public static final String KEY_CLIENTBEANBALANCE = "KEY_CLIENTBEANBALANCE";
     public static final String KEY_CLIENTBEANTOTAL = "KEY_CLIENTBEANTOTAL";
     public static final String KEY_CLIENTBEANREPEAT = "KEY_CLIENTBEANREPEAT";
-    public static final String KEY_CLIENTBEASTARTWORK = "KEY_CLIENTBEASTARTWORK";
+    public static final String KEY_CLIENTBEANSTARTWORK = "KEY_CLIENTBEANSTARTWORK";
     public static final String KEY_CLIENTBEANWEEKWORK = "KEY_CLIENTBEANWEEKWORK";
     public static final String KEY_CLIENTBEANYEARWORK = "KEY_CLIENTBEANYEARWORK";
     public static final String KEY_CLIENTBEANDESCRIPTION = "KEY_CLIENTBEANDESCRIPTION";

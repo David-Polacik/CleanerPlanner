@@ -114,7 +114,7 @@ public class ClientsFragment extends Fragment {
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANBALANCE, idListView.getClientBalance());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANTOTAL, idListView.getClientTotal());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANREPEAT, idListView.getClientWorkRepeat());
-                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEASTARTWORK, idListView.getClientWorkStart());
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANSTARTWORK, idListView.getClientWorkStart());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, idListView.getClientWeekWork());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, idListView.getClientYearWork());
                 showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANDESCRIPTION, idListView.getClientDescription());
@@ -174,9 +174,13 @@ public class ClientsFragment extends Fragment {
                 Calendar calendar = Calendar.getInstance();
                 SimpleDateFormat formatDate = new SimpleDateFormat("d.M.yyyy");
                 String todaysDate = formatDate.format(calendar.getTime());
+                int weekDate = calendar.get(Calendar.WEEK_OF_YEAR);
+                int yearDate = calendar.get(Calendar.YEAR);
 
                 Intent showClientsActivityAdd = new Intent(getActivity(), ClientsActivityAdd.class);
-                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEASTARTWORK, todaysDate);
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANSTARTWORK, todaysDate);
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, weekDate);
+                showClientsActivityAdd.putExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, yearDate);
                 startActivity(showClientsActivityAdd);
             }
         });

@@ -29,6 +29,9 @@ public class WorksheetsMissedActivity extends Activity {
 
 
     private String clientId;
+    private Integer clientRepeatWork;
+    private Integer clientWeekWork;
+    private Integer clientYearWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +49,12 @@ public class WorksheetsMissedActivity extends Activity {
         layoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
         getWindow().setAttributes(layoutParams);
 
-        Intent getClientId = getIntent();
-        clientId = getClientId.getStringExtra(IntentConstant.KEY_CLIENTBEANID);
+        Intent getClientIntent = getIntent();
+        clientId = getClientIntent.getStringExtra(IntentConstant.KEY_CLIENTBEANID);
+
+        clientRepeatWork = getClientIntent.getIntExtra(IntentConstant.KEY_CLIENTBEANREPEAT, -1);
+        clientWeekWork = getClientIntent.getIntExtra(IntentConstant.KEY_CLIENTBEANWEEKWORK, 0);
+        clientYearWork = getClientIntent.getIntExtra(IntentConstant.KEY_CLIENTBEANYEARWORK, 0);
 
 
         clickOnCancelButton();
@@ -76,7 +83,26 @@ public class WorksheetsMissedActivity extends Activity {
                 String paymentReason = worksheetsMissedActivityReasonAutoCompleteTextView.getText().toString();
                 String paymentDate = formatDate.format(calendar.getTime());
 
+                calendar.set(Calendar.YEAR, clientYearWork);
+                calendar.set(Calendar.WEEK_OF_YEAR, clientWeekWork);
+                calendar.add(Calendar.WEEK_OF_YEAR, clientRepeatWork);
+
+                String nextWeekWorkDate = formatDate.format(calendar.getTime());
+
+                int weekWorkDate = calendar.get(Calendar.WEEK_OF_YEAR);
+                int yearWorkDate = calendar.get(Calendar.YEAR);
+
                 FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+
+                DatabaseReference updateWeekWork = FirebaseDatabase.getInstance().getReference().child(Objects.requireNonNull(firebaseAuth.getUid()))
+                        .child("clients").child(clientId).child("clientWeekWork");
+                updateWeekWork.setValue(weekWorkDate);
+                DatabaseReference updateYearWork = FirebaseDatabase.getInstance().getReference().child(Objects.requireNonNull(firebaseAuth.getUid()))
+                        .child("clients").child(clientId).child("clientYearWork");
+                updateYearWork.setValue(yearWorkDate);
+                DatabaseReference updatePaymentDate = FirebaseDatabase.getInstance().getReference().child(Objects.requireNonNull(firebaseAuth.getUid()))
+                        .child("clients").child(clientId).child("clientWorkStart");
+                updatePaymentDate.setValue(nextWeekWorkDate);
 
                 DatabaseReference createPaymentBean = FirebaseDatabase.getInstance().getReference().child(Objects.requireNonNull(firebaseAuth.getUid()))
                         .child("payments");

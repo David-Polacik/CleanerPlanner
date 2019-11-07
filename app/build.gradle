@@ -7,8 +7,8 @@ android {
         applicationId "com.polacik.david.cleanerplanner"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 7
-        versionName "1.06"
+        versionCode 10
+        versionName "1.12"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
